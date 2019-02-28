@@ -1,0 +1,196 @@
+/* Buscador filtro */
+.buscador-filtro{
+	position:relative;
+	z-index:31000;
+	background-color:#f6f6f6;
+	height:14em;
+	overflow:hidden;
+	margin-bottom:-2.2em;
+}
+.buscador-filtro.margen-inferior{
+	margin-bottom:2.2em;
+}
+.buscador-filtro form{
+	position:inherit;
+	width:90%;
+	height:3.65em;
+	margin:1em auto;
+	overflow:hidden;
+	opacity:.95;
+	border:1px solid #666;
+}
+@media all and (min-width:37.5em){ /*600px*/
+  .buscador-filtro form{
+    margin:4.688em auto;
+  }
+}
+@media all and (min-width:50em){ /* 800px */
+	.buscador-filtro form{
+		position:absolute;
+		width:45em;
+		left:50%;
+		top:0px;
+		margin:6em 0px 0px -22.5em;
+	}
+}
+.buscador-filtro form input{
+	height:100%;
+	border:none;
+	position:absolute;
+	top:0px;
+}
+.buscador-filtro form input[type="text"]{
+	/*width:95%;*/
+  width:calc(100% - 138px);
+	font-size:1.25em;
+	font-style:italic;
+	padding-left:15px;
+	color:#333;
+	left:0px;
+	border:2px solid #fff;
+	height:89.64%;
+  font-family: lora;
+  font-weight: bold;
+}
+@media all and (min-width:50em){ /* 800px */
+  /*
+	.buscador-filtro form input[type="text"]{
+		width:34.5em;
+	}
+  */
+}
+.buscador-filtro form input[type="text"]:hover,
+.buscador-filtro form input[type="text"]:focus{
+	border:2px solid #ba0c2f;
+}
+.buscador-filtro form input[type="image"]{
+	right:0px;
+}
+.buscador-filtro form input[type="submit"]{
+	right:0px;
+	background-color:#ba0c2f;
+	color:#fff;
+	text-transform:uppercase;
+	font-weight:bold;
+	padding:0px 25px;
+}
+@media all and (min-width:25em){ /* 400px */
+  /*
+  .buscador-filtro form input[type="submit"]{
+    padding:0px 25px;
+  }
+  */
+}
+.buscador-filtro button,
+.buscador-especifico.filtro button{
+	background-color:#eee;
+	border:1px solid #ccc;
+	font-family:lato;
+	text-transform:uppercase;
+	font-size:1.125em;
+	padding:10px 20px;
+	cursor:pointer;
+	transition:color .5s ease-out, background-color .5s ease-out;
+  margin-left:25px;
+}
+@media all and (min-width:37.5em){ /*600px*/
+  .buscador-filtro button,
+  .buscador-especifico.filtro button{
+    position:absolute;
+    right:10px;
+    top:10px;
+    margin-left:0px;
+  }
+}
+.buscador-filtro button:hover,
+.buscador-filtro button:focus,
+.buscador-especifico.filtro button:hover,
+.buscador-especifico.filtro button:focus{
+	background-color:#333;
+	border:1px solid #ccc;
+	color:#fff;
+}
+
+/* Menú opciones buscador */
+.buscador-especifico .menu-opciones-buscador{
+	padding:0px;
+	margin:0px;
+	text-align:right;
+	position:relative;
+}
+.buscador-especifico.filtro .menu-opciones-buscador{
+	padding:0px;
+	margin:10px 0px 0px 0px;
+	text-align:left;
+	position:relative;
+}
+.buscador-filtro .menu-opciones-buscador{
+	padding:0px;
+	margin:20px;
+	text-align:left;
+}
+@media all and (min-width:37.5em){ /*600px*/
+  .buscador-filtro .menu-opciones-buscador{
+    position:absolute;
+    left:10px;
+    top:10px;
+    margin:0px;
+  }
+}
+.buscador-especifico.login .menu-opciones-buscador{
+	margin-bottom:2em;
+}
+.buscador-especifico .menu-opciones-buscador:after{
+	content:' ';
+	position:absolute;
+	left:0px;
+	top:40%;
+	width:75%;
+	height:1px;
+	border-top:2px dashed #ccc;
+}
+.buscador-especifico.login .menu-opciones-buscador:after,
+.buscador-especifico.filtro .menu-opciones-buscador:after{
+	display:none;
+}
+@media all and (max-width:73.125em){ /* 1170px */
+	.buscador-especifico .menu-opciones-buscador:after{
+		width:60%;
+	}
+}
+@media all and (max-width:48em){ /* 768px */
+	.buscador-especifico .menu-opciones-buscador:after{
+		display:none;
+	}
+}
+.buscador-especifico .menu-opciones-buscador li,
+.buscador-filtro .menu-opciones-buscador li{
+	text-decoration:none;
+	display:inline-block;
+	min-height:30px;
+	margin-right:20px;
+	position:relative;
+}
+.buscador-especifico .menu-opciones-buscador li.ico-ayuda,
+.buscador-filtro .menu-opciones-buscador li.ico-ayuda{
+	background:url(../img/buscador-ayuda.png) left center no-repeat;
+	padding-left:35px;
+}
+.buscador-especifico .menu-opciones-buscador li.ico-calendario,
+.buscador-filtro .menu-opciones-buscador li.ico-calendario{
+	background:url(../img/buscador-calendario.png) left center no-repeat;
+	padding-left:35px;
+}
+.buscador-especifico .menu-opciones-buscador li a,
+.buscador-filtro .menu-opciones-buscador li a{
+	color:#ba0c2f;
+	text-decoration:none;
+	font-size:1.25em;
+	font-family:lato;
+}
+.buscador-especifico .menu-opciones-buscador li a:hover,
+.buscador-especifico .menu-opciones-buscador li a:focus,
+.buscador-filtro .menu-opciones-buscador li a:hover,
+.buscador-filtro .menu-opciones-buscador li a:focus{
+	text-decoration:underline;
+}

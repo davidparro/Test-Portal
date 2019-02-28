@@ -1,0 +1,75 @@
+<div class="contenedor">
+    <h1>Mis comunicaciones</h1>
+    <table class="tabla" style="width: 100%;">
+        <!-- <caption>Distribución de la deuda según PDE (SEC 2010). Datos a 30 de septiembre de 2016</caption> -->
+        <tbody>
+            <tr>
+                <th>Descripción</th>
+                <th>Fecha de creación</th>
+                <th>Creador</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+            <tr class="handy" (click)="goTo(1)" [class.destacada]="esNueva(1)">
+                <td>Comunicación 1</td>
+                <td>{{moment().add(-1, 'day').format('DD-MM-YYYY HH:mm')}}</td>
+                <td>Nombre Apellido Apellido</td>
+                <td>No vista</td>
+                <td>
+                    <button class="buscador-dos mh-4 handy">Leer</button>
+                    <button class="buscador-dos mh-4 handy">Borrar</button>
+                </td>
+            </tr>
+            <tr class="handy" (click)="goTo(2)" [class.destacada]="esNueva(2)">
+                <td>Comunicación 2</td>
+                <td>{{moment().add(-1, 'month').add(5, 'day').format('DD-MM-YYYY HH:mm')}}</td>
+                <td>Nombre Apellido Apellido</td>
+                <td>Vista</td>
+                <td>
+                    <button class="buscador-dos mh-4 handy">Leer</button>
+                    <button class="buscador-dos mh-4 handy">Borrar</button>
+                </td>
+            </tr>
+            <tr class="handy" (click)="goTo(3)" [class.destacada]="esNueva(3)">
+                <td>Comunicación 3</td>
+                <td>{{moment().add(-1, 'month').add(-10, 'day').format('DD-MM-YYYY HH:mm')}}</td>
+                <td>Nombre Apellido Apellido</td>
+                <td>No vista</td>
+                <td>
+                    <button class="buscador-dos mh-4 handy">Leer</button>
+                    <button class="buscador-dos mh-4 handy">Borrar</button>
+                </td>
+            </tr>
+            <tr class="handy" (click)="goTo(4)" [class.destacada]="esNueva(4)">
+                <td>Comunicación 4</td>
+                <td>{{moment().add(-2, 'month').add(-8, 'day').format('DD-MM-YYYY HH:mm')}}</td>
+                <td>Nombre Apellido Apellido</td>
+                <td>No vista</td>
+                <td>
+                    <button class="buscador-dos mh-4 handy">Leer</button>
+                    <button class="buscador-dos mh-4 handy">Borrar</button>
+                </td>
+            </tr>
+            <tr class="handy" (click)="goTo(5)" [class.destacada]="esNueva(5)">
+                <td>Comunicación 5</td>
+                <td>{{moment().add(-4, 'month').add(3, 'day').format('DD-MM-YYYY HH:mm')}}</td>
+                <td>Nombre Apellido Apellido</td>
+                <td>No vista</td>
+                <td>
+                    <button class="buscador-dos mh-4 handy">Leer</button>
+                    <button class="buscador-dos mh-4 handy">Borrar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="paginacion simple-pagination izq" aria-hidden="true">
+        <ul>
+            <li class="disabled"><span class="current prev">&lt;</span></li>
+            <li class="active"><span class="current">1</span></li>
+            <li><a [routerLink]="['page-2']" class="page-link">2</a></li>
+            <li><a [routerLink]="['page-2']" class="page-link next">&gt;</a></li>
+        </ul>
+    </div>
+
+</div>

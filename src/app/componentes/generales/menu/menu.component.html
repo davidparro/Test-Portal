@@ -1,0 +1,124 @@
+<div id="contenedor">
+    <div class="contenedor">
+        <div class="escudo">
+            <p>
+                <a [routerLink]="['/']">
+                    <img src="assets/img/jcyl.jpg" alt="Junta de Castilla y León" />
+                </a>
+            </p>
+            <h1 class="elemento-invisible">Catálogo de componentes - Junta de Castilla y León</h1>
+        </div>
+        <div class="cabecera">
+            <!-- <ul>
+                <li><a href=""><img src="assets/img/zona-privada-r.png" alt="Zona privada" /></a></li>
+                <li><a href=""><img src="assets/img/contacto-r.png" alt="Contacto" /></a></li>
+            </ul> -->
+            <div class="selector-idiomas">
+                <h2 class="elemento-invisible">Idiomas</h2>
+                <button class="idioma-actual" aria-haspopup="true" aria-expanded="false">Castellano</button>
+                <ul class="idiomas">
+                    <li><a lang="en" hreflang="en" href="">English</a></li>
+                    <li><a lang="fr" hreflang="fr" href="">Français</a></li>
+                    <li><a lang="pt" hreflang="pt" href="">Português</a></li>
+                </ul>
+            </div>
+            <!-- <h2 class="elemento-invisible">Redes sociales</h2>
+            <ul>
+                <li><a href=""><img src="assets/img/enc-facebook-r.png" alt="Facebook"></a></li>
+                <li><a href=""><img src="assets/img/enc-twitter-r.png" alt="Twitter"></a></li>
+                <li><a href=""><img src="assets/img/enc-youtube-r.png" alt="Youtube"></a></li>
+            </ul> -->
+            <!-- <h2 class="elemento-invisible">Menu jcyl.es</h2>
+            <p id="menu-jcyl"><a href="" aria-haspopup="true" aria-expanded="false"><img src="assets/img/enc-portales-r.png"
+                        alt="Abrir menú jcyl.es"></a></p> -->
+            <h2 class="elemento-invisible">Mi cuenta</h2>
+            <div id="mi-cuenta">
+                <a href="#mi-cuenta-detalle" aria-haspopup="true" aria-expanded="false">
+                    <img src="assets/img/mi-cuenta.png" alt="Mi cuenta">
+                    </a>
+                <div id="mi-cuenta-detalle">
+                    <p class="usuario">[USUARIO]</p>
+                    <p>[MAIL]</p>
+                    <p class="boton"><a href="">Mi cuenta</a></p>
+                    <p class="cerrar"><a href="">Cerrar sesión</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-menu-sticky-wrapper" class="sticky-wrapper" style="height: 80px;">
+        <div id="main-menu" class="items-6">
+            <!-- Barra de progreso -->
+            <div *ngIf="isSticky()" class="scroll-progress scroll-progress--fixed"
+                [class.scroll-progress-showed]="isSticky()">
+                <div class="scroll-progress__indicator" [style.width.%]="pageScroll">
+                    <br />
+                </div>
+            </div>
+
+            <div class="contenedor">
+                <h2 class="elemento-invisible">Menú principal</h2>
+                <button class="hamburger hamburger--spin" type="button" ara-label="Menú" aria-controls="menu"
+                    aria-haspopup="true" aria-expanded="false">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                    <span class="hamburger-text">Menú</span>
+                </button>
+                <div id="sidr">
+                    <ul id="menu">
+                        <li class="items-6 handy" [routerLink]="['/']">
+                            <a [routerLink]="['/']">Inicio</a>
+                        </li>
+                        <li class="items-6 handy" [routerLink]="['/notificaciones']">
+                            <a [routerLink]="['/notificaciones']">Notificaciones</a>
+                        </li>
+                        <li class="items-6 handy" [routerLink]="['/comunicaciones']">
+                            <a [routerLink]="['/comunicaciones']">Comunicaciones</a>
+                        </li>
+                        <li class="items-6 handy" [routerLink]="['/procedimientos']">
+                            <a [routerLink]="['/procedimientos']">Procedimientos</a>
+                        </li>
+                        <li class="items-6 handy" [routerLink]="['/suscripciones']">
+                            <a [routerLink]="['/suscripciones']">Suscripciones</a>
+                        </li>
+                        <li class="items-6 handy">
+                            <a>Gestión</a>
+
+                            <a href="#" class="menu-focus con-submenu">
+                                <img src="assets/img/sidr-mernu-cerrado.png" alt="" />
+                            </a>
+                            <div class="submenu">
+                                <ul>
+                                    <li [routerLink]="['/gestion/notificaciones']">
+                                        <a>Notificaciones</a>
+                                    </li>
+                                    <li [routerLink]="['/gestion/comunicaciones']">
+                                        <a>Comunicaciones</a>
+                                    </li>
+                                    <li [routerLink]="['/gestion/procedimientos']">
+                                        <a>Procedimientos</a>
+                                    </li>
+                                    <li [routerLink]="['/gestion/estadisticas']">
+                                        <a>Estadísticas</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="encabezado">
+        <picture>
+            <source media="(min-width:61.25em)" srcset="assets/img/header-guia-estilos.jpg">
+            <source media="(min-width:22.5em)" srcset="assets/img/header-guia-estilos-small.jpg">
+            <img src="assets/img/header-guia-estilos.jpg" alt="" />
+        </picture>
+        <div class="contenedor">
+            <p>Notificaciones<span>de Castilla y León</span></p>
+        </div>
+    </div>
+</div>

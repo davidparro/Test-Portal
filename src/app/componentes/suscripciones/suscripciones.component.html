@@ -1,0 +1,60 @@
+<div class="contenedor">
+
+    <div class="buscador-especifico fondo">
+        <form name="formulario" method="get" action="">
+            <fieldset class="fieldset">
+                <legend><span></span> Búsqueda de suscripciones</legend>
+                <div>
+                    <label for="[ID]">Procedimiento <span aria-label="campo obligatorio">*</span></label>
+                    <input id="[ID]" name="[ID]" type="text" aria-required="true">
+                </div>
+            </fieldset>
+            <input name="aceptar" value="Buscar" class="boton handy" (click)="resultados = true">
+        </form>
+    </div>
+
+    <ng-container *ngIf="resultados">
+        <h1>Resultados</h1>
+        <table class="tabla" style="width: 100%;">
+            <tbody>
+                <tr>
+                    <th>NIF</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Fecha de alta</th>
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <td>12345678Z</td>
+                    <td>Nombre</td>
+                    <td>Apellido1 Apellido2</td>
+                    <td>{{moment().add(-1, 'day').format('DD-MM-YYYY HH:mm')}}</td>
+                    <td>nomape@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>21194206M</td>
+                    <td>Nombre</td>
+                    <td>Apellido1 Apellido2</td>
+                    <td>{{moment().add(-1, 'day').format('DD-MM-YYYY HH:mm')}}</td>
+                    <td>nomape@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>81719259Y</td>
+                    <td>Nombre</td>
+                    <td>Apellido1 Apellido2</td>
+                    <td>{{moment().add(-1, 'day').format('DD-MM-YYYY HH:mm')}}</td>
+                    <td>nomape@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="paginacion simple-pagination izq" aria-hidden="true">
+            <ul>
+                <li class="disabled"><span class="current prev">&lt;</span></li>
+                <li class="active"><span class="current">1</span></li>
+                <li><a [routerLink]="['page-2']" class="page-link">2</a></li>
+                <li><a [routerLink]="['page-2']" class="page-link next">&gt;</a></li>
+            </ul>
+        </div>
+    </ng-container>
+</div>

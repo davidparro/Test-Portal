@@ -1,0 +1,35 @@
+<div class="contenedor">
+    <h1>Comunicación: {{idComunicacion}}</h1>
+
+    <div class="buscador-especifico fondo">
+        <form name="formulario" method="get" action="">
+            <fieldset class="fieldset">
+                <legend><span></span> Comunicación {{idComunicacion}}</legend>
+                <div>
+                    <label for="[ID]">Descripción <span aria-label="campo obligatorio">*</span></label>
+                    <input id="[ID]" name="[ID]" type="text" aria-required="true"
+                        [value]="'Comunicación' + idComunicacion">
+                </div>
+                <div>
+                    <label for="[ID]">Creador <span aria-label="campo obligatorio">*</span></label>
+                    <input id="[ID]" name="[ID]" type="text" aria-required="true" value="Nombre Apellido Apellido">
+                </div>
+                <div>
+                    <label for="[ID]">Tipo</label>
+                    <select id="[ID]">
+                        <option>Todas</option>
+                    </select>
+                </div>
+                <div class="fechas">
+                    <div>
+                        <label for="[ID]">Fecha de registro</label>
+                        <input id="[ID]" name="[ID]" type="text" placeholder="dd/mm/aaaa" value="27/02/2019">
+                        <!-- <img src="assets/img/calendario-popup.png" alt=""> -->
+                    </div>
+                </div>
+            </fieldset>
+            <input name="aceptar" value="Marcar como leída" class="boton handy">
+            <input style="float: right;" name="aceptar" value="Rechazar" class="boton handy">
+        </form>
+    </div>
+</div>

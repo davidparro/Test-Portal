@@ -1,0 +1,79 @@
+<div class="contenedor">
+    <h1>Publicar procedimiento</h1>
+
+    <ng-container>
+        <div class="buscador-especifico fondo">
+            <form name="formulario" method="get" action="">
+                <fieldset class="fieldset en-linea">
+                    <legend><span></span> Suscriptor</legend>
+                    <div>
+                        <label for="[ID]">NIF ciudadano<span aria-label="campo obligatorio">*</span></label>
+                        <input id="[ID]" name="[ID]" type="text" aria-required="true">
+                    </div>
+                    <div>
+                        <label for="[ID]">Nombre<span aria-label="campo obligatorio">*</span></label>
+                        <input id="[ID]" name="[ID]" type="text" aria-required="true">
+                    </div>
+                    <div>
+                        <label for="[ID]">Apellidos<span aria-label="campo obligatorio">*</span></label>
+                        <input id="[ID]" name="[ID]" type="text" aria-required="true">
+                    </div>
+                </fieldset>
+                <fieldset class="fieldset">
+                    <legend><span></span> Procedimiento</legend>
+                    <div>
+                        <label for="provincia">Seleccione procedimiento</label>
+                        <select id="provincia">
+                            <option selected>Procedimiento 1</option>
+                            <option>Procedimiento 2</option>
+                            <option>Procedimiento 3</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset class="fieldset">
+                    <legend><span></span> Expediente</legend>
+                    <div>
+                        <label for="[ID]">Expediente<span aria-label="campo obligatorio">*</span></label>
+                        <input id="[ID]" name="[ID]" type="text" aria-required="true">
+                    </div>
+                    <div>
+                        <label for="[ID]">Asunto<span aria-label="campo obligatorio">*</span></label>
+                        <input id="[ID]" name="[ID]" type="text" aria-required="true">
+                    </div>
+                </fieldset>
+                <fieldset class="fieldset">
+                    <legend><span></span> Custodia</legend>
+                    <div>
+                        <label for="[ID]">Nombre de la notificación<span aria-label="campo obligatorio">*</span></label>
+                        <input id="[ID]" name="[ID]" type="text" aria-required="true">
+                    </div>
+                    <div>
+                        <label for="[ID]">Id del documento<span aria-label="campo obligatorio">*</span></label>
+                        <input id="[ID]" name="[ID]" type="text" aria-required="true">
+                    </div>
+                </fieldset>
+                <fieldset class="en-linea">
+                    <legend>Puesta a disposición</legend>
+                    <div>
+                        <input type="radio" value="" id="radio-1">
+                        <label for="radio-1">Hoy</label>
+                    </div>
+                    <div>
+                        <input type="radio" value="" id="radio-2">
+                        <label for="radio-2">Diferido</label>
+                    </div>
+                    <div>
+                        <input id="[ID]" name="[ID]" type="text" aria-required="true">
+                    </div>
+                </fieldset>
+                <div>
+                    <input name="aceptar" value="Publicar" class="boton handy"
+                        style="margin: 0 8px; font-size: 12px;">
+                    <input name="aceptar" value="Limpiar" class="boton handy" style="margin: 0 8px; font-size: 12px;">
+                    <input name="aceptar" value="Cancelar" class="boton handy" style="float: right; font-size: 12px;">
+                </div>
+            </form>
+        </div>
+    </ng-container>
+
+</div>

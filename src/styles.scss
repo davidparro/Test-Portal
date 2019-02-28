@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+/* generales */
+.rechazada {
+    color: #f00;
+}
+.handy {
+    cursor: pointer;
+}
+.mh-4{
+    margin: 0 4px;
+}
+/* Botones */
+.buscador-uno{
+	background-color: #ba0c2f;
+    border: medium none;
+    color: #fff;
+    font-style: normal;    
+    padding: 10px 25px;
+    width: auto;
+    font-family: lato;
+    font-weight:bold;
+    border-radius:4px;
+    display: block;
+    text-align:center;
+}
+.buscador-dos{
+    /*background: #ba0c2f url("../img/buscar-boton.png") no-repeat scroll 25% center;*/
+    background: #ba0c2f;
+	display: block;
+	background-position: 10px center;
+    display: inline-block;
+    // margin: 0;
+    padding: 5px 25px;
+    width: auto;
+    font-family:lato;
+    // font-weight:bold;
+    text-transform: uppercase;
+    transition: background-color 0.5s ease-out 0s;
+    // margin:1em auto;
+    color:#fff;
+    font-style: normal;
+    font-size: 10px;
+    border: none;
+}
+.buscador-dos:hover,
+.buscador-dos:focus{
+	background-color:#333;
+}
