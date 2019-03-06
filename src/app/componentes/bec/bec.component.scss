@@ -1,0 +1,32 @@
+.flex-container {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.jumbotron {
+    color: white;
+    background-color: #ba283b;
+    height: 80px;
+    text-align: center;
+    margin: 4px;
+    width: calc(25% - 8px);
+    &:hover>span{
+        transform: scale(1.2, 1.2);
+        font-weight: bold;
+    }
+}
+.d-flex {
+    display: flex;
+}
+.center-container{
+  align-items: center;
+  justify-content: center;
+}
+.ff-lato{
+    font-family: lato;
+}
+
+@media all and (max-width: 40em) {
+    .jumbotron {
+        width: calc(50% - 8px);
+    }
+}

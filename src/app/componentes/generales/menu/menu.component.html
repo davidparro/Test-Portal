@@ -35,7 +35,7 @@
             <div id="mi-cuenta">
                 <a href="#mi-cuenta-detalle" aria-haspopup="true" aria-expanded="false">
                     <img src="assets/img/mi-cuenta.png" alt="Mi cuenta">
-                    </a>
+                </a>
                 <div id="mi-cuenta-detalle">
                     <p class="usuario">[USUARIO]</p>
                     <p>[MAIL]</p>
@@ -70,17 +70,40 @@
                         <li class="items-6 handy" [routerLink]="['/']">
                             <a [routerLink]="['/']">Inicio</a>
                         </li>
+                        <li class="items-6 handy" [routerLink]="['/bec']">
+                            <a [routerLink]="['/bec']">BEC</a>
+                        </li>
                         <li class="items-6 handy" [routerLink]="['/notificaciones']">
                             <a [routerLink]="['/notificaciones']">Notificaciones</a>
                         </li>
                         <li class="items-6 handy" [routerLink]="['/comunicaciones']">
                             <a [routerLink]="['/comunicaciones']">Comunicaciones</a>
                         </li>
-                        <li class="items-6 handy" [routerLink]="['/procedimientos']">
-                            <a [routerLink]="['/procedimientos']">Procedimientos</a>
-                        </li>
-                        <li class="items-6 handy" [routerLink]="['/suscripciones']">
-                            <a [routerLink]="['/suscripciones']">Suscripciones</a>
+                        <li class="items-6 handy">
+                            <a>Procedimientos</a>
+
+                            <a class="menu-focus con-submenu">
+                                <img src="assets/img/sidr-mernu-cerrado.png" alt="" />
+                            </a>
+                            <div class="submenu">
+                                <ul>
+                                    <li [routerLink]="['/procedimientos/condiciones']">
+                                        <a>Condiciones</a>
+                                    </li>
+                                    <li [routerLink]="['/procedimientos/consulta']">
+                                        <a>Consulta</a>
+                                    </li>
+                                    <li [routerLink]="['/procedimientos/suscripciones']">
+                                        <a>Suscripciones</a>
+                                    </li>
+                                    <li [routerLink]="['/procedimientos/alta']">
+                                        <a>Alta</a>
+                                    </li>
+                                    <li [routerLink]="['/procedimientos/baja']">
+                                        <a>Baja</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="items-6 handy">
                             <a>Gestión</a>

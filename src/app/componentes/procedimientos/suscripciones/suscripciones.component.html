@@ -1,0 +1,61 @@
+<div class="contenedor">
+    <h1>Mis suscripciones</h1>
+    <table class="tabla" style="width: 100%;">
+        <!-- <caption>Distribución de la deuda según PDE (SEC 2010). Datos a 30 de septiembre de 2016</caption> -->
+        <tbody>
+            <tr>
+                <th>Descripción</th>
+                <th>Fecha de creación</th>
+                <th>Acciones</th>
+            </tr>
+            <tr class="handy">
+                <td>MINEL-SUBVENCIÓN DIRECTA A MUNICIPIOS MINEROS EN EL MARCO DEL PLAN DE DINAMIZACIÓN ECONÓMICA DE M.
+                    MINEROS 2016-2020 </td>
+                <td>{{moment().add(-1, 'day').format('DD-MM-YYYY HH:mm')}}</td>
+                <td>
+                    <button class="buscador-dos mh-4 handy">Condiciones</button>
+                </td>
+            </tr>
+            <tr class="handy">
+                <td>INSCRIPCION Y ACREDITACION DE CENTROS Y ENTIDADES DE FORMACION PROFESIONAL PARA EL EMPLEO </td>
+                <td>{{moment().add(-1, 'month').add(5, 'day').format('DD-MM-YYYY HH:mm')}}</td>
+                <td>
+                    <button class="buscador-dos mh-4 handy">Condiciones</button>
+                </td>
+            </tr>
+            <tr class="handy">
+                <td>AYUDAS DESTINADAS A TRABAJADORES DESEMPLEADOS QUE PARTICIPEN EN EL PROGRAMA PERSONAL DE INTEGRACIÓN
+                    Y EMPLEO </td>
+                <td>{{moment().add(-1, 'month').add(-10, 'day').format('DD-MM-YYYY HH:mm')}}</td>
+                <td>
+                    <button class="buscador-dos mh-4 handy">Condiciones</button>
+                </td>
+            </tr>
+            <tr class="handy">
+                <td>PROGRAMA DE SUBVENCIÓN DE FORMACIÓN PROFESIONAL ESPECÍFICA IMPARTIDA POR EMPRESAS DEL SECTOR DE
+                    AUTOMOCIÓN </td>
+                <td>{{moment().add(-2, 'month').add(-8, 'day').format('DD-MM-YYYY HH:mm')}}</td>
+                <td>
+                    <button class="buscador-dos mh-4 handy">Condiciones</button>
+                </td>
+            </tr>
+            <tr class="handy">
+                <td>ACCEDER JÓVENES (ACCEDER -FSG/2018) </td>
+                <td>{{moment().add(-4, 'month').add(3, 'day').format('DD-MM-YYYY HH:mm')}}</td>
+                <td>
+                    <button class="buscador-dos mh-4 handy">Condiciones</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="paginacion simple-pagination izq" aria-hidden="true">
+        <ul>
+            <li class="disabled"><span class="current prev">&lt;</span></li>
+            <li class="active"><span class="current">1</span></li>
+            <li><a [routerLink]="['page-2']" class="page-link">2</a></li>
+            <li><a [routerLink]="['page-2']" class="page-link next">&gt;</a></li>
+        </ul>
+    </div>
+
+</div>

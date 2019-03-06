@@ -12,14 +12,38 @@ import { GestionEstadisticasComponent } from './componentes/gestion/estadisticas
 import { GestionNotificacionesComponent } from './componentes/gestion/notificaciones/notificaciones.component';
 import { GestionComunicacionesComponent } from './componentes/gestion/comunicaciones/comunicaciones.component';
 import { GestionProcedimientosComponent } from './componentes/gestion/procedimientos/procedimientos.component';
-import { ProcedimientosComponent } from './componentes/procedimientos/procedimientos.component';
-import { SuscripcionesComponent } from './componentes/suscripciones/suscripciones.component';
-import { TestGuardGuard } from './guards/test-guard.guard';
+import { ProcedimientosComponent } from './componentes/procedimientos/consulta/procedimientos.component';
+import { BecComponent } from './componentes/bec/bec.component';
+import { BecBorrarComponent } from './componentes/bec/borrar/borrar.component';
+import { BecEditarComponent } from './componentes/bec/editar/editar.component';
+import { BecCrearComponent } from './componentes/bec/crear/crear.component';
+import { ProcedimientosBajaComponent } from './componentes/procedimientos/baja/baja.component';
+import { ProcedimientossAltaComponent } from './componentes/procedimientos/alta/alta.component';
+import { ProcedimientosCondicionesComponent } from './componentes/procedimientos/condiciones/condiciones.component';
+import { ProcedimientosSuscripcionesComponent } from './componentes/procedimientos/suscripciones/suscripciones.component';
 
 const routes: Routes = [
     {
         path: '',
         component: InicioComponent
+    },
+    {
+        path: 'bec',
+        component: BecComponent,
+        children: [
+            {
+                path: 'editar/:id',
+                component: BecEditarComponent
+            },
+            {
+                path: 'crear',
+                component: BecCrearComponent
+            },
+            {
+                path: 'borrar',
+                component: BecBorrarComponent
+            }
+        ]
     },
     {
         path: 'notificaciones',
@@ -29,8 +53,7 @@ const routes: Routes = [
         children: [
             {
                 path: '',
-                component: NotificacionesListadoComponent,
-                canActivate: [TestGuardGuard]
+                component: NotificacionesListadoComponent
             },
             {
                 path: 'editar/:id',
@@ -47,8 +70,7 @@ const routes: Routes = [
         children: [
             {
                 path: '',
-                component: ComunicacionesListadoComponent,
-                canActivate: [TestGuardGuard]
+                component: ComunicacionesListadoComponent
             },
             {
                 path: 'editar/:id',
@@ -83,11 +105,28 @@ const routes: Routes = [
     },
     {
         path: 'procedimientos',
-        component: ProcedimientosComponent
-    },
-    {
-        path: 'suscripciones',
-        component: SuscripcionesComponent
+        children: [
+            {
+                path: 'condiciones',
+                component: ProcedimientosCondicionesComponent
+            },
+            {
+                path: 'consulta',
+                component: ProcedimientosComponent
+            },
+            {
+                path: 'suscripciones',
+                component: ProcedimientosSuscripcionesComponent
+            },
+            {
+                path: 'alta',
+                component: ProcedimientossAltaComponent
+            },
+            {
+                path: 'baja',
+                component: ProcedimientosBajaComponent
+            }
+        ]
     },
     {
         path: '**',
@@ -96,7 +135,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes, {useHash: true})],
     exports: [RouterModule]
 })
 export class AppRoutingModule { }

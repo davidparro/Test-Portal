@@ -18,8 +18,16 @@ import { GestionNotificacionesComponent } from './componentes/gestion/notificaci
 import { GestionComunicacionesComponent } from './componentes/gestion/comunicaciones/comunicaciones.component';
 import { GestionEstadisticasComponent } from './componentes/gestion/estadisticas/estadisticas.component';
 import { GestionProcedimientosComponent } from './componentes/gestion/procedimientos/procedimientos.component';
-import { ProcedimientosComponent } from './componentes/procedimientos/procedimientos.component';
+import { ProcedimientosComponent } from './componentes/procedimientos/consulta/procedimientos.component';
 import { SuscripcionesComponent } from './componentes/suscripciones/suscripciones.component';
+import { BecComponent } from './componentes/bec/bec.component';
+import { BecCrearComponent } from './componentes/bec/crear/crear.component';
+import { BecBorrarComponent } from './componentes/bec/borrar/borrar.component';
+import { BecEditarComponent } from './componentes/bec/editar/editar.component';
+import { ProcedimientosCondicionesComponent } from './componentes/procedimientos/condiciones/condiciones.component';
+import { ProcedimientosSuscripcionesComponent } from './componentes/procedimientos/suscripciones/suscripciones.component';
+import { ProcedimientossAltaComponent } from './componentes/procedimientos/alta/alta.component';
+import { ProcedimientosBajaComponent } from './componentes/procedimientos/baja/baja.component';
 
 @NgModule({
     declarations: [
@@ -40,7 +48,15 @@ import { SuscripcionesComponent } from './componentes/suscripciones/suscripcione
         GestionEstadisticasComponent,
         GestionProcedimientosComponent,
         ProcedimientosComponent,
-        SuscripcionesComponent
+        SuscripcionesComponent,
+        BecComponent,
+        BecCrearComponent,
+        BecBorrarComponent,
+        BecEditarComponent,
+        ProcedimientosCondicionesComponent,
+        ProcedimientosSuscripcionesComponent,
+        ProcedimientossAltaComponent,
+        ProcedimientosBajaComponent
     ],
     imports: [
         BrowserModule,

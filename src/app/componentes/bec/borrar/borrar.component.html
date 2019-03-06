@@ -1,0 +1,27 @@
+<div style="margin: 20px 0 0 0"></div>
+
+<div class="buscador-especifico fondo">
+    <form name="formulario" method="get" action="">
+        <fieldset class="fieldset">
+            <legend><span></span> Cancelar BEC</legend>
+            <div>
+                <label for="[ID]">Nombre <span aria-label="campo obligatorio">*</span></label>
+                <input id="[ID]" name="[ID]" type="text" aria-required="true" value="Nombre">
+            </div>
+            <div>
+                <label for="[ID]">Primer apellido <span aria-label="campo obligatorio">*</span></label>
+                <input id="[ID]" name="[ID]" type="text" aria-required="true" value="Apellido1">
+            </div>
+            <div>
+                <label for="[ID]">Segundo apellido <span aria-label="campo obligatorio">*</span></label>
+                <input id="[ID]" name="[ID]" type="text" aria-required="true" value="Apellido2">
+            </div>
+            <div>
+                <label for="[ID]">NIF <span aria-label="campo obligatorio">*</span></label>
+                <input id="[ID]" name="[ID]" type="text" aria-required="true" value="12345678Z">
+            </div>
+        </fieldset>
+        <input name="aceptar" value="Cancelar BEC" class="boton handy">
+        <input (click)="cancelar()" style="float: right;" name="Cancelar" value="Volver" class="boton handy">
+    </form>
+</div>

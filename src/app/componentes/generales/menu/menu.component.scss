@@ -57,3 +57,12 @@ a {
 		padding: 10px 40px 10px 40px ;
 	}
 }
+
+@media all and (max-width: 1104px) {
+    #main-menu ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-family: lato;
+        font-size: .7em;
+    }
+}

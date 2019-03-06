@@ -1,0 +1,32 @@
+<div class="contenedor">
+    <h1>Buzón electrónico del Ciudadano</h1>
+    <p>
+        Mediante el Buzón Electrónico del Ciudadano (BEC) usted dispondrá de un buzón electrónico, único, gratuito, en
+        el que podrá recibir las notificaciones y comunicaciones administrativas vía electrónica de aquellos
+        procedimientos a los que esté suscrito.
+
+        Este servicio cumple con las máximas garantías de confidencialidad, autenticidad y privacidad con el fin de
+        asegurar la identidad de los participantes y de las comunicaciones.
+
+        Para que el servicio esté activo completamente, usted deberá completar el formulario existente en la opción de
+        menú "Crear el BEC"
+    </p>
+    <div class="d-flex flex-container">
+        <div (click)="becService.show.next(true);" [routerLink]="['/bec/crear']" class="jumbotron w-25 d-flex center-container handy">
+            <span class="ff-lato">
+                Crear BEC
+            </span>
+        </div>
+        <div (click)="becService.show.next(true);" [routerLink]="['/bec/editar/' + 1]" class="jumbotron w-25 d-flex center-container handy">
+            <span class="ff-lato">
+                Modificar datos personales
+            </span>
+        </div>
+        <div (click)="becService.show.next(true);" [routerLink]="['/bec/borrar']" class="jumbotron w-25 d-flex center-container handy">
+            <span class="ff-lato">
+                Cancelar BEC
+            </span>
+        </div>
+    </div>
+    <router-outlet *ngIf="becService.show.getValue()"></router-outlet>
+</div>
